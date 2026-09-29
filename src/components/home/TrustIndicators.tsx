@@ -36,7 +36,7 @@ export const TrustIndicators: React.FC = () => {
           {metrics.map((metric, idx) => (
             <div
               key={idx}
-              className="p-6 rounded-2xl bg-slate-50/70 border border-slate-200/80 space-y-2.5 hover:bg-white hover:border-sky-300 hover:shadow-md transition-all duration-200 group"
+              className="p-6 rounded-2xl bg-slate-50/80 border border-slate-200/90 space-y-2.5 hover:bg-white hover:border-sky-300 hover:shadow-md transition-all duration-200 group"
             >
               <div className="flex items-baseline gap-2">
                 <span className="font-mono text-xs font-semibold text-slate-400 group-hover:text-sky-600 transition-colors">

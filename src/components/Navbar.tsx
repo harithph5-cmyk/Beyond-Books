@@ -63,8 +63,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
     <header
       className={`sticky top-0 z-50 w-full transition-colors duration-200 ${
         isScrolled
-          ? 'bg-white/95 backdrop-blur-xl border-b border-slate-200 shadow-sm'
-          : 'bg-white/80 backdrop-blur-md border-b border-slate-200/60'
+          ? 'bg-white/95 backdrop-blur-xl border-b border-slate-200 shadow-xs'
+          : 'bg-white/85 backdrop-blur-md border-b border-slate-200/70'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
@@ -77,7 +77,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
           <img
             src={IMAGES.logo}
             alt="Beyond Books Logo"
-            className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg object-cover shadow-sm border border-slate-200 group-hover:border-sky-500/50 transition-all shrink-0"
+            className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg object-cover shadow-xs border border-slate-200 group-hover:border-sky-500/50 transition-all shrink-0"
             referrerPolicy="no-referrer"
           />
           <span className="font-heading text-xl sm:text-2xl font-bold tracking-tight text-slate-900 group-hover:text-sky-600 transition-colors">
@@ -118,17 +118,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
             href="https://wa.me/15552348920?text=Hi%20Beyond%20Books,%20I'd%20like%20to%20inquire%20about%20upcoming%20AI%20and%20Digital%20Marketing%20courses."
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 text-slate-500 hover:text-emerald-600 transition-colors rounded-lg hover:bg-slate-100 flex items-center gap-1.5 text-xs"
+            className="p-2 text-slate-500 hover:text-emerald-700 transition-colors rounded-lg hover:bg-slate-100 flex items-center gap-1.5 text-xs"
             title="Chat directly on WhatsApp"
             aria-label="Chat directly on WhatsApp"
           >
             <MessageCircle className="w-4 h-4 fill-emerald-500/20 text-emerald-600" />
-            <span className="text-slate-600 hover:text-emerald-600 font-medium">WhatsApp</span>
+            <span className="text-slate-600 hover:text-emerald-700 font-medium">WhatsApp</span>
           </a>
 
           <button
             onClick={onOpenConsultation}
-            className="px-4 py-2 text-xs font-semibold text-white bg-sky-600 hover:bg-sky-700 rounded-lg transition-all duration-150 shadow-sm shadow-sky-600/20 whitespace-nowrap flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 cursor-pointer"
+            className="px-4 py-2 text-xs font-semibold text-white bg-sky-600 hover:bg-sky-700 rounded-lg transition-all duration-150 shadow-xs shadow-sky-600/20 whitespace-nowrap flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 cursor-pointer"
           >
             <span>Book Consultation</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
@@ -139,13 +139,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
         <div className="flex items-center gap-2 md:hidden">
           <button
             onClick={onOpenConsultation}
-            className="px-3 py-1.5 text-[11px] font-semibold text-white bg-sky-600 rounded-lg whitespace-nowrap shadow-sm"
+            className="px-3 py-1.5 text-[11px] font-semibold text-white bg-sky-600 rounded-lg whitespace-nowrap shadow-xs"
           >
             Consult
           </button>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 text-slate-700 hover:text-slate-900 rounded-lg hover:bg-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500"
+            className="p-2 text-slate-700 hover:text-slate-900 rounded-lg hover:bg-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 cursor-pointer"
             aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
             aria-expanded={mobileMenuOpen}
           >
@@ -165,7 +165,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
                 <button
                   key={item.href}
                   onClick={() => scrollToSection(item.href)}
-                  className={`flex items-center justify-between px-3 py-2.5 rounded-lg text-sm text-left font-medium transition-colors ${
+                  className={`flex items-center justify-between px-3 py-2.5 rounded-lg text-sm text-left font-medium transition-colors cursor-pointer ${
                     isActive
                       ? 'bg-sky-50 text-sky-700 font-semibold'
                       : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
@@ -184,7 +184,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
                 setMobileMenuOpen(false);
                 onOpenConsultation();
               }}
-              className="w-full py-2.5 px-4 text-center text-xs font-semibold text-white bg-sky-600 hover:bg-sky-700 rounded-lg transition-colors flex items-center justify-center gap-1.5 shadow-sm"
+              className="w-full py-2.5 px-4 text-center text-xs font-semibold text-white bg-sky-600 hover:bg-sky-700 rounded-lg transition-colors flex items-center justify-center gap-1.5 shadow-xs cursor-pointer"
             >
               <span>Schedule Free Strategy Call</span>
               <ArrowUpRight className="w-3.5 h-3.5" />

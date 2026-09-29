@@ -6,10 +6,8 @@ import { FeaturedCoursesSection } from './home/FeaturedCoursesSection';
 import { WhyChooseUsSection } from './home/WhyChooseUsSection';
 import { StudentOutcomesSection } from './home/StudentOutcomesSection';
 import { WorkshopsSection } from './home/WorkshopsSection';
-import { TestimonialsSection } from './home/TestimonialsSection';
 import { FaqSection } from './home/FaqSection';
 import { ContactSection } from './home/ContactSection';
-import { CtaSection } from './home/CtaSection';
 
 interface HomePageProps {
   onSelectCourse: (course: Course) => void;
@@ -58,20 +56,11 @@ export const HomePage: React.FC<HomePageProps> = ({
         onSelectWorkshop={onSelectWorkshop}
       />
 
-      {/* 7. Testimonials */}
-      <TestimonialsSection />
-
-      {/* 8. FAQ */}
+      {/* 7. FAQ */}
       <FaqSection />
 
-      {/* 9. Direct Application & Contact Form */}
+      {/* 8. Direct Application & Contact Form */}
       <ContactSection onSuccess={onContactSuccess} />
-
-      {/* 10. CTA */}
-      <CtaSection
-        onOpenConsultation={onOpenConsultation}
-        onExploreCourses={() => scrollToAnchor('courses')}
-      />
     </div>
   );
 };

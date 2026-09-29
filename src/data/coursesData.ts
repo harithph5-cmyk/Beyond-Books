@@ -1,4 +1,5 @@
 import { Course } from '../types';
+import { IMAGES } from '../assets/images';
 
 export const COURSES_DATA: Course[] = [
   {
@@ -7,6 +8,7 @@ export const COURSES_DATA: Course[] = [
     categoryName: 'Digital Marketing',
     category: 'Digital Marketing',
     title: 'Master Digital Marketing from Strategy to Execution',
+    image: IMAGES.courseDigitalMarketing,
     shortDesc: 'Learn SEO, Social Media Marketing, Google Ads, Meta Ads, Content Marketing, Analytics, AI tools and digital marketing automation.',
     longDesc: 'A comprehensive, project-driven program designed to take you from foundational marketing concepts to advanced omnichannel campaign execution. Work with real ad budgets, optimize search rankings, analyze user funnels in GA4, and automate marketing pipelines with state-of-the-art AI tools.',
     learnItems: [
@@ -71,7 +73,7 @@ export const COURSES_DATA: Course[] = [
     ],
     prerequisites: 'No prior marketing experience required. Passion for digital media and technology.',
     certification: 'Beyond Books Certified Digital Marketing Professional',
-    fee: '$850',
+    fee: '₹24,999',
     featured: true
   },
   {
@@ -80,6 +82,7 @@ export const COURSES_DATA: Course[] = [
     categoryName: 'Web Designing',
     category: 'Web Designing',
     title: 'Design & Build Modern Websites',
+    image: IMAGES.courseWebDesigning,
     shortDesc: 'Learn to create responsive, professional and SEO-friendly websites using modern design and development tools.',
     longDesc: 'Master the art and science of web design. From user research and wireframing in Figma to developing responsive, fast-loading, SEO-ready websites with HTML5, CSS3, modern JavaScript, and WordPress/Elementor.',
     learnItems: [
@@ -145,7 +148,7 @@ export const COURSES_DATA: Course[] = [
     ],
     prerequisites: 'Basic computer literacy. No coding experience needed.',
     certification: 'Beyond Books Certified Web Designer',
-    fee: '$750',
+    fee: '₹19,999',
     featured: true
   },
   {
@@ -154,6 +157,7 @@ export const COURSES_DATA: Course[] = [
     categoryName: 'Full Stack Development',
     category: 'Full Stack Development',
     title: 'Become a Full Stack Developer',
+    image: IMAGES.courseFullStackDev,
     shortDesc: 'Build complete web applications from frontend to backend while working on real-world development projects.',
     longDesc: 'A rigorous full stack engineering curriculum. Learn modern frontend libraries (React/TypeScript), scalable backend servers (Node.js/Express), relational and NoSQL databases, RESTful APIs, Git workflows, and cloud deployment on Vercel and AWS.',
     learnItems: [
@@ -218,7 +222,7 @@ export const COURSES_DATA: Course[] = [
     ],
     prerequisites: 'Basic understanding of programming logic or completion of an intro coding tutorial.',
     certification: 'Beyond Books Certified Full Stack Engineer',
-    fee: '$1,450',
+    fee: '₹34,999',
     featured: true
   },
   {
@@ -227,6 +231,7 @@ export const COURSES_DATA: Course[] = [
     categoryName: 'Tally & Accounting',
     category: 'Tally & Accounting',
     title: 'Build Job-Ready Accounting Skills',
+    image: IMAGES.courseTallyAccounting,
     shortDesc: 'Learn practical accounting, GST, Tally Prime, invoicing and business financial management skills.',
     longDesc: 'Developed in consultation with chartered accountants and corporate finance controllers. Master practical business accounting from voucher entries and bank reconciliations to comprehensive GST filings, TDS, payroll processing, and executive financial reporting in Tally Prime.',
     learnItems: [
@@ -281,7 +286,7 @@ export const COURSES_DATA: Course[] = [
     ],
     prerequisites: 'Open to commerce, business, and non-commerce students wanting practical accounting skills.',
     certification: 'Beyond Books Certified Professional Accountant',
-    fee: '$450',
+    fee: '₹14,999',
     featured: true
   },
   {
@@ -290,6 +295,7 @@ export const COURSES_DATA: Course[] = [
     categoryName: 'SaaS Development',
     category: 'SaaS Development',
     title: 'Learn How SaaS Products Are Built',
+    image: IMAGES.courseSaasDev,
     shortDesc: 'Understand the process of turning an idea into a scalable software product—from product planning and UI to development, deployment and growth.',
     longDesc: 'A complete product-to-code blueprint for aspiring SaaS founders and product engineers. Learn how multi-tenant architectures operate, integrate Stripe subscription billing, build intuitive customer dashboards, implement webhooks, and scale software products from MVP to profitability.',
     learnItems: [
@@ -354,7 +360,7 @@ export const COURSES_DATA: Course[] = [
     ],
     prerequisites: 'Basic knowledge of web development (HTML/CSS/JS or React).',
     certification: 'Beyond Books Certified SaaS Product Builder',
-    fee: '$1,250',
+    fee: '₹29,999',
     featured: true
   },
   {
@@ -363,6 +369,7 @@ export const COURSES_DATA: Course[] = [
     categoryName: 'AI & Automation',
     category: 'AI & Automation',
     title: 'Use AI to Work Smarter',
+    image: IMAGES.courseAiAutomation,
     shortDesc: 'Learn how to use modern AI tools for content, marketing, research, productivity, automation and business workflows.',
     longDesc: 'Empower yourself with autonomous agents and frontier AI capabilities. Learn to orchestrate LLMs, connect apps with n8n and Make, automate lead enrichment, build customer service bots, and eliminate repetitive tasks with custom AI workflows.',
     learnItems: [
@@ -426,7 +433,7 @@ export const COURSES_DATA: Course[] = [
     ],
     prerequisites: 'No coding needed. Open to professionals, marketers, founders, and students.',
     certification: 'Beyond Books Certified AI & Automation Specialist',
-    fee: '$800',
+    fee: '₹22,999',
     featured: true
   }
 ];

@@ -6,6 +6,7 @@ export interface Course {
   categoryName?: string;
   title: string;
   category: string;
+  image?: string;
   shortDesc: string;
   longDesc: string;
   duration: string;
@@ -74,6 +75,8 @@ export interface Testimonial {
   outcome: string;
   courseTaken: string;
   quote: string;
+  image?: string;
+  rating?: number;
 }
 
 export interface FAQItem {

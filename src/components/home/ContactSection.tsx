@@ -56,7 +56,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onSuccess }) => 
                       href={`https://wa.me/15552348920?text=Hi%20Beyond%20Books,%20I%20just%20submitted%20an%20inquiry%20under%20the%20name%20${encodeURIComponent(name)}.`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center gap-1.5 transition-colors shadow-sm"
+                      className="px-4 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center gap-1.5 transition-colors shadow-xs"
                     >
                       <MessageCircle className="w-4 h-4" />
                       <span>Speed Up via WhatsApp</span>
@@ -198,7 +198,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onSuccess }) => 
                 href="https://wa.me/15552348920?text=Hi%20Beyond%20Books,%20I'd%20like%20to%20learn%20more%20about%20your%20training%20programs."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center justify-center gap-2 transition-colors shadow-sm"
+                className="w-full py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center justify-center gap-2 transition-colors shadow-xs"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>Open WhatsApp Live Chat</span>

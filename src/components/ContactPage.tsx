@@ -5,7 +5,7 @@ export const ContactPage: React.FC = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
-  const [track, setTrack] = useState('AI-Driven Growth Marketing Flagship');
+  const [track, setTrack] = useState('Digital Marketing');
   const [experience, setExperience] = useState('1-3 years');
   const [message, setMessage] = useState('');
   const [submitted, setSubmitted] = useState(false);
@@ -16,19 +16,19 @@ export const ContactPage: React.FC = () => {
   };
 
   return (
-    <div className="py-12 sm:py-16 space-y-16">
+    <div className="py-12 sm:py-16 space-y-16 bg-slate-50/50">
       {/* Header */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
         <div className="max-w-3xl space-y-3">
-          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-cyan-400">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>Admissions & Corporate Inquiries</span>
+          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-sky-700">
+            <Sparkles className="w-3.5 h-3.5 text-sky-600" />
+            <span>Admissions & Inquiries</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl font-bold font-heading text-white tracking-tight">
+          <h1 className="text-4xl sm:text-5xl font-bold font-heading text-slate-900 tracking-tight">
             Connect With Our Admissions Committee
           </h1>
-          <p className="text-slate-300 text-base leading-relaxed">
-            Have questions about cohort prerequisites, curriculum depth, or corporate team sponsorships? We answer all inquiries within 24 hours.
+          <p className="text-slate-600 text-base leading-relaxed">
+            Have questions about cohort prerequisites, curriculum depth, or class schedules? We answer all inquiries promptly.
           </p>
         </div>
       </section>
@@ -38,29 +38,29 @@ export const ContactPage: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Form Column */}
           <div className="lg:col-span-7">
-            <div className="p-8 sm:p-10 rounded-3xl glass-panel bg-[#090e1a]/90 border border-white/10 shadow-2xl">
+            <div className="p-8 sm:p-10 rounded-3xl bg-white border border-slate-200 shadow-xl">
               {submitted ? (
                 <div className="py-10 text-center space-y-4">
-                  <div className="w-14 h-14 mx-auto rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center">
+                  <div className="w-14 h-14 mx-auto rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center">
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
-                  <h2 className="text-2xl font-bold font-heading text-white">Inquiry Received</h2>
-                  <p className="text-sm text-slate-300 max-w-md mx-auto leading-relaxed">
-                    Thank you, <span className="text-white font-medium">{name}</span>. An admissions mentor has been assigned to your profile. We will email you at <span className="text-cyan-300 font-medium">{email}</span> within 24 hours.
+                  <h2 className="text-2xl font-bold font-heading text-slate-900">Inquiry Received</h2>
+                  <p className="text-sm text-slate-600 max-w-md mx-auto leading-relaxed">
+                    Thank you, <span className="text-slate-900 font-semibold">{name}</span>. An admissions mentor has been assigned to your profile. We will contact you at <span className="text-sky-700 font-semibold">{email}</span> within 24 hours.
                   </p>
                   <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
                     <a
                       href={`https://wa.me/15552348920?text=Hi%20Beyond%20Books,%20I%20just%20submitted%20an%20inquiry%20under%20the%20name%20${encodeURIComponent(name)}.`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-5 py-2.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs flex items-center gap-2 transition-colors"
+                      className="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center gap-2 transition-colors shadow-xs"
                     >
                       <MessageCircle className="w-4 h-4" />
                       <span>Speed Up via WhatsApp</span>
                     </a>
                     <button
                       onClick={() => setSubmitted(false)}
-                      className="px-5 py-2.5 rounded-lg bg-white/10 hover:bg-white/15 text-white text-xs font-medium transition-colors"
+                      className="px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold transition-colors cursor-pointer"
                     >
                       Send Another Message
                     </button>
@@ -68,17 +68,8 @@ export const ContactPage: React.FC = () => {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
-                  <div className="space-y-1">
-                    <h2 className="text-xl font-bold font-heading text-white">
-                      Request Consultation or Program Info
-                    </h2>
-                    <p className="text-xs text-slate-300">
-                      Fill out the details below and an admissions director will prepare a customized syllabus overview.
-                    </p>
-                  </div>
-
                   <div>
-                    <label className="block text-xs font-semibold text-slate-300 mb-1.5">
+                    <label className="block text-xs font-semibold text-slate-700 mb-1.5">
                       Full Legal Name *
                     </label>
                     <input
@@ -87,14 +78,14 @@ export const ContactPage: React.FC = () => {
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       placeholder="e.g. Rachel Chen"
-                      className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white text-xs placeholder-slate-400 focus:outline-none focus:border-cyan-400"
+                      className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-xs placeholder-slate-400 focus:outline-none focus:bg-white focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors"
                     />
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-semibold text-slate-300 mb-1.5">
-                        Work or Personal Email *
+                      <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+                        Email Address *
                       </label>
                       <input
                         type="email"
@@ -102,11 +93,11 @@ export const ContactPage: React.FC = () => {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="rachel@company.com"
-                        className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white text-xs placeholder-slate-400 focus:outline-none focus:border-cyan-400"
+                        className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-xs placeholder-slate-400 focus:outline-none focus:bg-white focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-semibold text-slate-300 mb-1.5">
+                      <label className="block text-xs font-semibold text-slate-700 mb-1.5">
                         Phone / WhatsApp Number *
                       </label>
                       <input
@@ -115,66 +106,66 @@ export const ContactPage: React.FC = () => {
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
                         placeholder="+1 (555) 019-2834"
-                        className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white text-xs placeholder-slate-400 focus:outline-none focus:border-cyan-400"
+                        className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-xs placeholder-slate-400 focus:outline-none focus:bg-white focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors"
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-semibold text-slate-300 mb-1.5">
+                      <label className="block text-xs font-semibold text-slate-700 mb-1.5">
                         Program of Interest *
                       </label>
                       <select
                         value={track}
                         onChange={(e) => setTrack(e.target.value)}
-                        className="w-full px-4 py-3 rounded-xl bg-[#0c1220] border border-white/10 text-white text-xs focus:outline-none focus:border-cyan-400"
+                        className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-xs focus:outline-none focus:bg-white focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors"
                       >
-                        <option value="AI-Driven Growth Marketing Flagship">AI-Driven Growth Marketing (Flagship)</option>
-                        <option value="Generative AI for Content & Creative">Generative AI for Creative & Content</option>
-                        <option value="MarTech Automation & AI Agents">MarTech Automation & AI Agents</option>
-                        <option value="Programmatic SEO & GEO Search">Programmatic SEO & GEO Search</option>
-                        <option value="Executive AI Strategy for CMOs">Executive AI Strategy (Leadership Track)</option>
+                        <option value="Digital Marketing">Digital Marketing</option>
+                        <option value="Web Designing">Web Designing</option>
+                        <option value="Full Stack Development">Full Stack Development</option>
+                        <option value="Tally & Accounting">Tally & Accounting</option>
+                        <option value="SaaS Development">SaaS Development</option>
+                        <option value="AI & Automation">AI & Automation</option>
                         <option value="Live Weekend Masterclasses">Live Weekend Masterclasses</option>
-                        <option value="Custom Corporate Training">Custom Corporate / Team Training</option>
                       </select>
                     </div>
 
                     <div>
-                      <label className="block text-xs font-semibold text-slate-300 mb-1.5">
-                        Experience Level
+                      <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+                        Current Experience Level
                       </label>
                       <select
                         value={experience}
                         onChange={(e) => setExperience(e.target.value)}
-                        className="w-full px-4 py-3 rounded-xl bg-[#0c1220] border border-white/10 text-white text-xs focus:outline-none focus:border-cyan-400"
+                        className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-xs focus:outline-none focus:bg-white focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors"
                       >
-                        <option value="0-1 years / Transitioning">Under 1 year / Transitioning</option>
+                        <option value="0-1 years / Transitioning">Under 1 year / Beginner</option>
                         <option value="1-3 years">1-3 years (Practitioner)</option>
                         <option value="4-7 years">4-7 years (Senior Specialist / Lead)</option>
-                        <option value="8+ years / Leadership">8+ years (Director / VP / Founder)</option>
+                        <option value="8+ years / Leadership">8+ years (Management / Founder)</option>
                       </select>
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-slate-300 mb-1.5">
-                      Your Goals & Specific Questions (Optional)
+                    <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+                      Your Career Goals or Questions (Optional)
                     </label>
                     <textarea
                       rows={3}
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
-                      placeholder="Tell us what you are looking to achieve or ask specific questions regarding cohort scheduling..."
-                      className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white text-xs placeholder-slate-400 focus:outline-none focus:border-cyan-400"
+                      placeholder="Tell us what you are looking to achieve..."
+                      className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-xs placeholder-slate-400 focus:outline-none focus:bg-white focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full py-3.5 px-6 rounded-xl bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-bold text-xs transition-colors shadow-lg shadow-cyan-950/40 cursor-pointer flex items-center justify-center gap-2"
+                    className="w-full py-3.5 px-6 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-bold text-xs transition-colors shadow-md shadow-sky-600/20 cursor-pointer flex items-center justify-center gap-2"
                   >
-                    <span>Send Message to Admissions Committee</span>
+                    <span>Submit Inquiry</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </form>
@@ -182,77 +173,75 @@ export const ContactPage: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column: Direct Contact & WhatsApp */}
+          {/* Right Info Cards */}
           <div className="lg:col-span-5 space-y-6">
-            {/* Direct WhatsApp Fast Track Card */}
-            <div className="p-6 rounded-3xl glass-panel bg-gradient-to-br from-emerald-950/40 via-[#0a121c] to-[#070b14] border border-emerald-500/30 space-y-4">
-              <div className="flex items-center gap-2.5">
-                <div className="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
-                  <MessageCircle className="w-5 h-5 fill-emerald-500/30" />
+            {/* WhatsApp Fast Track */}
+            <div className="p-6 rounded-3xl bg-white border border-emerald-300 shadow-sm space-y-4">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center">
+                  <MessageCircle className="w-5 h-5 fill-emerald-500/20" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-white text-base">Direct WhatsApp Hotline</h3>
-                  <p className="text-xs text-emerald-400">Average response: Under 5 minutes</p>
+                  <h3 className="font-bold text-slate-900 text-sm">Direct WhatsApp Admissions Desk</h3>
+                  <p className="text-xs text-emerald-700 font-semibold">Online now · Fast response</p>
                 </div>
               </div>
 
-              <p className="text-xs text-slate-300 leading-relaxed">
-                Need immediate answers about cohort seat availability, payment schedules, or syllabus prerequisites? Speak directly with our admissions desk on WhatsApp.
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Need immediate answers regarding cohort seat availability or corporate invoicing? Speak directly with our admissions advisors on WhatsApp.
               </p>
 
               <a
                 href="https://wa.me/15552348920?text=Hi%20Beyond%20Books,%20I'd%20like%20to%20learn%20more%20about%20your%20training%20programs."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-3 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs flex items-center justify-center gap-2 transition-colors shadow-lg shadow-emerald-950/40"
+                className="w-full py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center justify-center gap-2 transition-colors shadow-xs"
               >
-                <MessageCircle className="w-4 h-4 fill-slate-950" />
+                <MessageCircle className="w-4 h-4" />
                 <span>Open WhatsApp Live Chat</span>
               </a>
             </div>
 
-            {/* Campus & Office Info */}
-            <div className="p-6 rounded-3xl glass-panel bg-[#090e1a]/80 border border-white/10 space-y-4">
-              <h3 className="text-base font-bold font-heading text-white">
-                Executive Campus & Headquarters
+            {/* Campus Info */}
+            <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-4">
+              <h3 className="text-base font-bold font-heading text-slate-900">
+                Beyond Books Learning Campus
               </h3>
 
-              <div className="space-y-3.5 text-xs text-slate-300">
+              <div className="space-y-3 text-xs text-slate-600">
                 <div className="flex items-start gap-3">
-                  <MapPin className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
+                  <MapPin className="w-4 h-4 text-sky-600 shrink-0 mt-0.5" />
                   <div>
-                    <p className="font-semibold text-white">Beyond Books Learning Campus</p>
-                    <p className="text-slate-300">500 Tech Hub Blvd, Suite 400</p>
-                    <p className="text-slate-300">Innovation District, MA 02142</p>
+                    <p className="font-semibold text-slate-900">Flagship Headquarters</p>
+                    <p className="text-slate-500">500 Tech Hub Blvd, Suite 400 · Innovation District</p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <Phone className="w-4 h-4 text-cyan-400 shrink-0" />
+                  <Phone className="w-4 h-4 text-sky-600 shrink-0" />
                   <div>
-                    <span className="text-slate-300">Admissions Line: </span>
-                    <a href="tel:+15552348920" className="text-white hover:text-cyan-400 transition-colors font-medium">
+                    <span className="text-slate-500">Admissions Line: </span>
+                    <a href="tel:+15552348920" className="text-slate-900 hover:text-sky-600 transition-colors font-medium">
                       +1 (555) 234-8920
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <Mail className="w-4 h-4 text-cyan-400 shrink-0" />
+                  <Mail className="w-4 h-4 text-sky-600 shrink-0" />
                   <div>
-                    <span className="text-slate-300">Official Inquiries: </span>
-                    <a href="mailto:admissions@beyondbooks.edu" className="text-white hover:text-cyan-400 transition-colors font-medium">
+                    <span className="text-slate-500">Official Inquiries: </span>
+                    <a href="mailto:admissions@beyondbooks.edu" className="text-slate-900 hover:text-sky-600 transition-colors font-medium">
                       admissions@beyondbooks.edu
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3 pt-1 border-t border-white/5">
-                  <Clock className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
+                <div className="flex items-start gap-3 pt-2 border-t border-slate-100">
+                  <Clock className="w-4 h-4 text-sky-600 shrink-0 mt-0.5" />
                   <div>
-                    <p className="font-semibold text-white">Admissions Desk Hours</p>
-                    <p className="text-slate-300">Monday – Friday: 8:00 AM – 8:00 PM EST</p>
-                    <p className="text-slate-300">Saturday: 9:00 AM – 4:00 PM EST</p>
+                    <p className="text-slate-500">Mon – Fri: 8:00 AM – 8:00 PM EST</p>
+                    <p className="text-slate-500">Sat: 9:00 AM – 4:00 PM EST</p>
                   </div>
                 </div>
               </div>

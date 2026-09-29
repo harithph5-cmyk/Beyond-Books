@@ -105,6 +105,25 @@ export const CourseModal: React.FC<CourseModalProps> = ({
         <div className="flex-1 overflow-y-auto p-6 space-y-6">
           {activeTab === 'syllabus' ? (
             <>
+              {/* Course Banner Image */}
+              {course.image && (
+                <div className="relative w-full aspect-[21/9] sm:aspect-[24/9] rounded-xl overflow-hidden bg-slate-100 border border-slate-200">
+                  <img
+                    src={course.image}
+                    alt={course.title}
+                    className="w-full h-full object-cover"
+                    referrerPolicy="no-referrer"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
+                  <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-white text-xs">
+                    <span className="font-semibold">{course.category}</span>
+                    <span className="bg-sky-600 px-2 py-0.5 rounded text-[11px] font-bold">
+                      Fee: {course.fee}
+                    </span>
+                  </div>
+                </div>
+              )}
+
               {/* Program Overview */}
               <div className="space-y-3">
                 <h3 className="text-sm font-bold uppercase tracking-wider text-slate-900">

@@ -31,7 +31,7 @@ export const TestimonialsSection: React.FC = () => {
           </div>
 
           {/* Interactive filter tabs */}
-          <div className="flex flex-wrap items-center gap-1.5 p-1 bg-slate-200/60 border border-slate-300/70 rounded-xl self-start md:self-end">
+          <div className="flex flex-wrap items-center gap-1.5 p-1 bg-slate-200/70 border border-slate-300 rounded-xl self-start md:self-end">
             <button
               onClick={() => setFilter('all')}
               className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-colors cursor-pointer ${
